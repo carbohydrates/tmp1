@@ -1,0 +1,21 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: grafana
+spec:
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: default
+  project: default
+  source:
+    repoURL: https://github.com/carbohydrates/tmp1.git
+    path: .
+    plugin:
+      name: aws
+      env:
+        - name: CHART_VERSION
+          value: 6.1.7
+        - name: CHART_NAME
+          value: grafana/grafana
+  syncPolicy:
+    automated: {}
