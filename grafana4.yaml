@@ -18,6 +18,7 @@ spec:
         - name: CHART_NAME
           value: grafana/grafana
   syncPolicy:
-    automated: {}
+    automated:
+      selfHeal: true
 
 
