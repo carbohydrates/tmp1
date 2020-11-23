@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: grafana5
+  name: grafana
 spec:
   destination:
     server: https://kubernetes.default.svc
