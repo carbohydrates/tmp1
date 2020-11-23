@@ -5,8 +5,8 @@ metadata:
 spec:
   destination:
     server: https://kubernetes.default.svc
-    namespace: infra
-  project: default
+    namespace: default
+  project: infra
   source:
     repoURL: https://github.com/carbohydrates/tmp1.git
     path: .
